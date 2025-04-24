@@ -22,27 +22,29 @@ npm install
 ```
 
 ## 使用方法
-1. 環境変数の設定
+1. パッケージのインストール
 ```
-RELATION_SUBDOMAIN=あなたのサブドメイン
-RELATION_API_TOKEN=あなたのAPIトークン
+npm install -g relation-mcp-server
 ```
-### 認証
+
+2. mcp.jsonの設定
+``` json
+{
+  "relation-api": {
+    "command": "relation-mcp-server",
+    "env": {
+      "RELATION_API_TOKEN": "あなたのトークン",
+      "RELATION_SUBDOMAIN": "あなたのサブドメイン"
+    }
+  }
+}
+```
+
+## 認証
 
 すべてのAPIの利用にアクセストークンが必要です。
 
 Re:lation 画面左下ツールアイコン（システム設定）より、[API トークン] でアクセストークンを発行・確認することができます。
-
-
-2. サーバーの起動
-```
-npm start
-```
-
-## 開発方法
-```
-npm run dev
-```
 
 ## ライセンス
 MIT
