@@ -1,6 +1,12 @@
 {
   "name": "relation-mcp-server",
   "version": "1.0.0",
+  "bin": {
+    "relation-mcp-server": "./dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
   "main": "index.js",
   "scripts": {
     "build": "tsc",
